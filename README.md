@@ -1,9 +1,9 @@
-# Counting-Minimal-D-separators-in-DAGs
-Code for paper:Counting Minimal D-separators in DAGs with Its Applications in Consistency Testing
 # FCMDS: Finding Close Minimal D-separators in DAGs
 
 [![Python Version](https://img.shields.io/badge/python-3.7%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Code for paper: Counting Minimal D-separators in DAGs with Its Applications in Consistency Testing
 
 ## 📖 Introduction
 
@@ -22,13 +22,17 @@ To demonstrate its practical utility, we apply the proposed **Finding Close Mini
    ```bash
    git clone https://github.com/jstfp/Counting-Minimal-D-separators-in-DAGs.git
    cd Counting-Minimal-D-separators-in-DAGs
+
 Install the required dependencies. The code relies on standard Python scientific libraries:
 pip install networkx matplotlib
-## 🚀 Quick Start
-The core algorithm is implemented in the FCMS(g, u, v) function. Here is a simple example of how to use it to find the minimal d-separator between two nodes in a given DAG:
+## 🚀 Quick Start & Reproducing Experiments
+All core algorithms (like FCMS) and the code for generating comparison plots (Parental vs. Sparse basis) are entirely contained within the Jupyter Notebook.
+To use the algorithm or reproduce the empirical results, please open and run the provided notebook:
+# 1.Launch Jupyter Notebook in your terminal:
+jupyter notebook main.ipynb
+# 2.Inside the notebook, you will find the definition of the FCMS(g, u, v) function. An internal example looks like this:
 import networkx as nx
-from <main.ipynb> import FCMS 
-
+```python
 # 1. Create a simple Directed Acyclic Graph (DAG)
 G = nx.DiGraph()
 G.add_edges_from([('0', '1'), ('1', '2'), ('0', '3'), ('3', '2')])
@@ -37,14 +41,24 @@ G.add_edges_from([('0', '1'), ('1', '2'), ('0', '3'), ('3', '2')])
 source_node = '0'
 target_node = '2'
 
+# Calling the algorithm defined in the previous cells
 separator = FCMS(G, source_node, target_node)
-
 print(f"Minimal d-separator between {source_node} and {target_node}: {separator}")
-## 📊 Reproducing Experiments (Model Checking)
-To reproduce the empirical results and generate the comparison plots (Parental vs. Sparse basis) mentioned in the paper, simply run the main script:
-python <main>.ipynb
-This will run the run_experiment_and_plot() function, which evaluates the sum_conditioning_sizes_on_graph over multiple random DAGs and displays the following plots:
+'''
+# 3.By running the cells towards the end of the notebook, you will execute run_experiment_and_plot(), which outputs two visual charts:
 Sum of conditioning set sizes: Comparing sparse vs. parental methods across different node sizes \(n\) and expected neighbor densities \(l\).
+% Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
+## 📂 Repository Structure
+main.ipynb: The main interactive notebook containing the core algorithm FCMS, helper functions for DAG connectivity, random DAG generators, experiment evaluations, and matplotlib visualizations.
+
+
+
+
+
+
+
+
+
 % Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
 ## 📂 Repository Structure
 <mian>.ipynb: Contains the core algorithm FCMS, helper functions for DAG connectivity, and random DAG generators (generate_connected_dag, generate_random_dag). Also contains the code for experiment evaluation and matplotlib visualization.
