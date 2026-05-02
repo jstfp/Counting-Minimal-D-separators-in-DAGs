@@ -31,24 +31,24 @@ To demonstrate its practical utility, we apply the proposed **Finding Close Mini
 All core algorithms (like FCMS) and the code for generating comparison plots (Parental vs. Sparse basis) are entirely contained within the Jupyter Notebook.
 To use the algorithm or reproduce the empirical results, please open and run the provided notebook:
 # 1.Launch Jupyter Notebook in your terminal:
-```bash
-jupyter notebook main.ipynb
-```
+   ```bash
+   jupyter notebook main.ipynb
+   ```
 # 2.Inside the notebook, you will find the definition of the FCMS(g, u, v) function. An internal example looks like this:
-import networkx as nx
-```python
-# 1. Create a simple Directed Acyclic Graph (DAG)
-G = nx.DiGraph()
-G.add_edges_from([('0', '1'), ('1', '2'), ('0', '3'), ('3', '2')])
+   import networkx as nx
+   ```python
+   # 1. Create a simple Directed Acyclic Graph (DAG)
+   G = nx.DiGraph()
+   G.add_edges_from([('0', '1'), ('1', '2'), ('0', '3'), ('3', '2')])
 
-# 2. Find the minimal d-separator between node '0' and node '2'
-source_node = '0'
-target_node = '2'
+   # 2. Find the minimal d-separator between node '0' and node '2'
+   source_node = '0'
+   target_node = '2'
 
-# Calling the algorithm defined in the previous cells
-separator = FCMS(G, source_node, target_node)
-print(f"Minimal d-separator between {source_node} and {target_node}: {separator}")
-```
+   # 3.Calling the algorithm defined in the previous cells
+   separator = FCMS(G, source_node, target_node)
+   print(f"Minimal d-separator between {source_node} and {target_node}: {separator}")
+   ```
 # 3.By running the cells towards the end of the notebook, you will execute run_experiment_and_plot(), which outputs two visual charts:
 Sum of conditioning set sizes: Comparing sparse vs. parental methods across different node sizes \(n\) and expected neighbor densities \(l\).
 % Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
