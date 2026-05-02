@@ -23,10 +23,10 @@ To demonstrate its practical utility, we apply the proposed **Finding Close Mini
    git clone https://github.com/jstfp/Counting-Minimal-D-separators-in-DAGs.git
    cd Counting-Minimal-D-separators-in-DAGs
    ```
-Install the required dependencies. The code relies on standard Python scientific libraries:
- ```bash
-pip install networkx matplotlib
- ```
+2.Install the required dependencies. The code relies on standard Python scientific libraries:
+   ```bash
+   pip install networkx matplotlib
+   ```
 ## 🚀 Quick Start & Reproducing Experiments
 All core algorithms (like FCMS) and the code for generating comparison plots (Parental vs. Sparse basis) are entirely contained within the Jupyter Notebook.
 To use the algorithm or reproduce the empirical results, please open and run the provided notebook:
