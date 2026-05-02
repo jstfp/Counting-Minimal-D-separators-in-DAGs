@@ -50,8 +50,8 @@ To use the algorithm or reproduce the empirical results, please open and run the
    print(f"Minimal d-separator between {source_node} and {target_node}: {separator}")
    ```
 3. By running the cells towards the end of the notebook, you will execute run_experiment_and_plot(), which outputs two visual charts:
-* ** Sum of conditioning set sizes: Comparing sparse vs. parental methods across different node sizes \(n\) and expected neighbor densities \(l\).
-* ** % Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
+* Sum of conditioning set sizes: Comparing sparse vs. parental methods across different node sizes \(n\) and expected neighbor densities \(l\).
+* % Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
 ## 📂 Repository Structure
 main.ipynb: The main interactive notebook containing the core algorithm FCMS, helper functions for DAG connectivity, random DAG generators, experiment evaluations, and matplotlib visualizations.
 ## 📄 License
