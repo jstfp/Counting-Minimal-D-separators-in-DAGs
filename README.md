@@ -55,14 +55,3 @@ Sum of conditioning set sizes: Comparing sparse vs. parental methods across diff
 ## 📂 Repository Structure
 main.ipynb: The main interactive notebook containing the core algorithm FCMS, helper functions for DAG connectivity, random DAG generators, experiment evaluations, and matplotlib visualizations.
 
-
-
-
-
-
-
-
-
-% Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
-## 📂 Repository Structure
-<mian>.ipynb: Contains the core algorithm FCMS, helper functions for DAG connectivity, and random DAG generators (generate_connected_dag, generate_random_dag). Also contains the code for experiment evaluation and matplotlib visualization.
