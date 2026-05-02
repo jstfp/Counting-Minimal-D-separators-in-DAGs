@@ -27,7 +27,7 @@ pip install networkx matplotlib
 ## 🚀 Quick Start
 The core algorithm is implemented in the FCMS(g, u, v) function. Here is a simple example of how to use it to find the minimal d-separator between two nodes in a given DAG:
 import networkx as nx
-from <YOUR_SCRIPT_NAME> import FCMS 
+from <main.ipynb> import FCMS 
 
 # 1. Create a simple Directed Acyclic Graph (DAG)
 G = nx.DiGraph()
@@ -42,9 +42,9 @@ separator = FCMS(G, source_node, target_node)
 print(f"Minimal d-separator between {source_node} and {target_node}: {separator}")
 ## 📊 Reproducing Experiments (Model Checking)
 To reproduce the empirical results and generate the comparison plots (Parental vs. Sparse basis) mentioned in the paper, simply run the main script:
-python <YOUR_SCRIPT_NAME>.py
+python <main>.ipynb
 This will run the run_experiment_and_plot() function, which evaluates the sum_conditioning_sizes_on_graph over multiple random DAGs and displays the following plots:
 Sum of conditioning set sizes: Comparing sparse vs. parental methods across different node sizes \(n\) and expected neighbor densities \(l\).
 % Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
 ## 📂 Repository Structure
-<YOUR_SCRIPT_NAME>.py: Contains the core algorithm FCMS, helper functions for DAG connectivity, and random DAG generators (generate_connected_dag, generate_random_dag). Also contains the code for experiment evaluation and matplotlib visualization.
+<mian>.ipynb: Contains the core algorithm FCMS, helper functions for DAG connectivity, and random DAG generators (generate_connected_dag, generate_random_dag). Also contains the code for experiment evaluation and matplotlib visualization.
