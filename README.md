@@ -54,5 +54,17 @@ To use the algorithm or reproduce the empirical results, please open and run the
 * % Reduction in conditioning set size: Demonstrating the benefit (often >80%) of using the sparse basis over the parental basis.
 ## 📂 Repository Structure
 main.ipynb: The main interactive notebook containing the core algorithm FCMS, helper functions for DAG connectivity, random DAG generators, experiment evaluations, and matplotlib visualizations.
+## 📝 Citation
+
+Our paper is currently in preparation. If you find this code useful in your research, please consider citing our manuscript or this repository. We will update this section with the official publication details once it is available.
+
+```bibtex
+@unpublished{fcmds_in_prep,
+  title={Counting Minimal D-separators in DAGs with Its Applications in Consistency Testing},
+  author={Yi Sun and Jingyu Chang},
+  note={Manuscript in preparation},
+  year={2026}
+}
+```
 ## 📄 License
 This project is licensed under the MIT License.
